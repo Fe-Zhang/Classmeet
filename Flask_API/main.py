@@ -1,24 +1,3 @@
-# Copyright 2015 Google Inc. All Rights Reserved.
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-
-"""This sample shows how to connect to PostgreSQL running on Cloud SQL.
-
-See the documentation for details on how to setup and use this sample:
-    https://cloud.google.com/appengine/docs/flexible/python\
-    /using-cloud-sql-postgres
-"""
-
 import logging
 import os
 import socket
@@ -26,10 +5,14 @@ import socket
 from flask import Flask, request
 from flask_api import FlaskAPI
 from flask_sqlalchemy import SQLAlchemy
+from flask_cors import CORS
 import sqlalchemy
 
 
 app = FlaskAPI(__name__)
+cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
+
+
 
 # [START gae_flex_postgres_app]
 # Environment variables are defined in app.yaml.
@@ -144,14 +127,6 @@ def get_similar_users():
         amount = 5
     topFive = list(sorted(dict_users, key=dict_users.__getitem__, reverse=True)[:amount])
     return {'users': topFive}
-
-@app.errorhandler(500)
-def server_error(e):
-    logging.exception('An error occurred during a request.')
-    return """
-    An internal error occurred: <pre>{}</pre>
-    See logs for full stacktrace.
-    """.format(e), 500
 
 
 if __name__ == '__main__':
