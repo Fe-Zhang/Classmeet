@@ -103,7 +103,7 @@ class SignUpForm extends Component {
 }
 
 const SignUpLink = () =>
-  <p>
+  <p className="forgot-password-font">
     Don't have an account?
     {' '}
     <Link to={routes.SIGN_UP}>Sign Up</Link>

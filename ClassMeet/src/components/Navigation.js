@@ -1,9 +1,5 @@
 import React from 'react';
-import {
-  BrowserRouter as Router,
-  Route,
-  Link
-} from 'react-router-dom';
+
 
 import AuthUserContext from './AuthUserContext';
 import SignOutButton from './SignOut';
@@ -20,12 +16,7 @@ const Navigation = () =>
   </AuthUserContext.Consumer>
 
 const NavigationAuth = () =>
-  <ul>
-    <li><Link to={routes.LANDING}>Landing</Link></li>
-    <li><Link to={routes.HOME}>Home</Link></li>
-    <li><Link to={routes.ACCOUNT}>Account</Link></li>
-    <li><SignOutButton /></li>
-  </ul>
+  <Redirect to={routes.HOME} ></Redirect>
 
 const NavigationNonAuth = () =>
     <Redirect to={routes.LANDING} ></Redirect>

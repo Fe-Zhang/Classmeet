@@ -48,18 +48,265 @@ body {
   height: 70px;
   margin: 0 auto;
   border-radius: 35px;
-  border: none;
+  border-style: solid;
+  border-width: 3px;
+  background-color: rgba(255, 255, 255, 0);
+  font-size: 60%;
+  color: white;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
-.signin-form {
-  width: 400px;
-  margin: 100px auto;
-}
-
-.signin-form input, .signin-form button{
-  width: 400px;
+.signin-button:hover {
+  width: 200px;
   height: 70px;
-  margin: 10px auto;
+  margin: 0 auto;
   border-radius: 35px;
   border: none;
+  background-color: white;
+  font-size: 60%;
+  color: black;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.signin-background{
+  background-image: url("login-background.jpg");
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+
+
+.signin-form {
+  width: 30vw;
+  margin-top: 20vh;
+  position: fixed;
+  margin-left: 35vw;
+  z-index: 5;
+ /* background-image: url("login-background.jpg");*/
+  background-color: rgb(255, 255, 255, 0.6);
+  /*filter: blur(10px); */
+  -webkit-backdrop-filter: blur(5px);
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+}
+
+.signin-form input{
+  width: 90%;
+  height: 70px;
+  margin-left: 5%;
+  margin-top: 3%;
+  border-radius: 35px;
+  border: none;
+}
+
+.sif input {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 200%;
+}
+
+.signin-form button{
+  width: 40%;
+  height: 70px;
+  margin-left: 30%;
+  margin-top: 3%;
+  border-radius: 35px;
+  border: none;
+ /* font-family: 'Roboto Condensed', sans-serif; */
+}
+.header-font{
+  margin-top: 17px;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 150%;
+}
+
+.forgot-password-font{
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 90%;
+  margin-left: 3vw;
+}
+
+/*
+CSS for Home.js
+*/
+.navigation-bar {
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 24vw;
+  height: 100vh;
+  /*background: rgb(78, 21, 78);*/
+  background-image: url("nav-background.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.user-photo {
+  border-radius: 50%;
+
+  min-width: 170px;
+  min-height: 170px;
+  border: .5rem solid rgb(255, 255, 255, 0.8);  
+/*  margin-left: 6vh;*/
+  margin: 0 auto;
+  margin-top: 20vh;
+ /* height: auto;*/
+ background-image: url("octopus.jpg");
+ background-position: center;
+ background-size: cover;
+}
+
+.navigation{
+  margin-top: 50vh;
+  width: 100%;
+  text-align: center;
+}
+
+.nav-link, .nav-link-signout {
+  color: rgb(150, 150, 150);
+  margin-top: 4vh;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: bold;
+  font-size: 150%;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  color: white;
+  margin-top: 4vh;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: bold;
+  font-size: 150%;
+  cursor: pointer;
+}
+
+.nav-link-signout:hover {
+  color: rgb(255, 95, 95);
+  margin-top: 4vh;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: bold;
+  font-size: 150%;
+  cursor: pointer;
+}
+
+.second-part {
+  margin-left: 27vw;
+}
+
+.welcome-message{
+  color: black;
+  margin-left: 4vw;
+  margin-top: 20vh;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: bold;
+  font-size: 500%;
+}
+
+.bottom-welcome-message{
+  color: black;
+  margin-left: 4vw;
+  margin-top: 5vh;
+  font-family: 'Roboto Condensed', sans-serif;
+ /* font-weight: bold; */
+  font-size: 180%;
+  width: 50vw;
+}
+
+
+.Sign-in-header {
+  color: black;
+  margin-left: 4vw;
+  margin-top: 5vh;
+  font-family: 'Roboto Condensed', sans-serif;
+ /* font-weight: bold; */
+  font-size: 180%;
+  width: 50vw;
+}
+
+.find-classes-selector {
+  margin-left: 4vw;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  font-size: 15px;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: lighter;
+  width: 500px;
+  height: 50px;
+  overflow: scroll;
+}
+
+.find-classes-selector option {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: lighter;
+}
+
+.find-button {
+  margin-left: 20px;
+  margin-top: -10px;
+  width: 100px;
+  height: 50px;
+  border-radius: 35px;
+  border-style: solid;
+  border-width: 2px;
+  background-color: rgba(255, 255, 255, 0);
+  font-size: 60%;
+  color: black;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 15px;
+}
+
+.find-button:hover {
+  margin-left: 20px;
+  margin-top: -10px;
+  width: 100px;
+  height: 50px;
+  border-radius: 35px;
+  border: none;
+  background-color: black;
+  font-size: 60%;
+  color: white;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 15px;
+}
+
+.back-to-find {
+  margin-left: 31vw;
+  width: 100px;
+  height: 50px;
+  border-radius: 35px;
+  border-style: solid;
+  border-width: 2px;
+  background-color: rgba(255, 255, 255, 0);
+  font-size: 60%;
+  color: black;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 15px;
+}
+
+.back-to-find:hover {
+  margin-left: 31vw;
+  width: 100px;
+  height: 50px;
+  border-radius: 35px;
+  border: none;
+  background-color: black;
+  font-size: 60%;
+  color: white;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 15px;
+}
+
+.student-list {
+  margin-left: 50px;
 }

@@ -8,7 +8,7 @@ const Landing = () =>
 <div className="landing-body">
   <div className="landing-wrapper">
     <div className="landing-header">
-      CLASS MEET   
+      CLASSMEET   
     </div>
     <div className="landing-body-font">
         Join. Collaborate. Study.

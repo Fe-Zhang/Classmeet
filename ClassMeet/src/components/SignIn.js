@@ -7,11 +7,13 @@ import { auth } from '../firebase';
 import * as routes from '../constants/routes';
 
 const SignInPage = ({ history }) =>
+  <div className="signin-background">
   <div className="signin-form">
-    <h1>SignIn</h1>
-    <SignInForm history={history} />
+    <h1 className="Sign-in-header">Sign In</h1>
+    <SignInForm className="sif" history={history} />
     <PasswordForgetLink />
     <SignUpLink />
+  </div>
   </div>
 
 const byPropKey = (propertyName, value) => () => ({
@@ -78,8 +80,8 @@ class SignInForm extends Component {
             type="password"
             placeholder="Password"
           /> <br></br>
-          <button disabled={isInvalid} type="submit">
-            Sign In
+          <button disabled={isInvalid} type="submit" >
+            <p className="header-font">Sign In</p>
           </button>
 
           { error && <p>{error.message}</p> }
